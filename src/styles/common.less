@@ -1,0 +1,56 @@
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+
+a {
+	text-decoration: none;
+  color: inherit;
+}
+
+// for scrollreveal or simiral plugins to prevent x scroll.
+// need to add the same rule to some inner wrappers in some cases
+body {
+	overflow-x: hidden;
+  color: @text-color;
+}
+.main-wrapper {
+  max-width: @site-width;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: @dark-bg;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	.clean-button;
+}
+
+.clean-button {
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	overflow: visible;
+	cursor: pointer;
+	background: transparent;
+	color: inherit;
+	font: inherit;
+	line-height: normal;
+	-webkit-font-smoothing: inherit;
+	-moz-osx-font-smoothing: inherit;
+	-webkit-appearance: none;
+	&::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	} 
+}
+
+.accent {
+  color: @brand-color;
+}

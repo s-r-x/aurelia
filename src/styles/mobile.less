@@ -1,0 +1,36 @@
+// ^-^ MOBILE ONLY STYLES ^-^
+
+body.is-mobile {
+  .about {
+    background: @dark-bg;
+  }
+  .slider {
+    opacity: 1 !important;
+    &--item {
+      margin: 0 50px;
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+    &--photo, &--title, &--bottom {
+      opacity: 1 !important;
+    }
+    &--flower {
+      &::before, &::after {
+        .hide;
+      }
+    }
+  }
+  .bouquets {
+    height: auto;
+    min-height: auto;
+    padding-bottom: 65px;
+    &--head {
+      .block;
+      .center;
+      font-family: @second-font;
+      .uppercase;
+      font-size: 10vw;
+      margin-top: 0;
+    }
+  }
+}

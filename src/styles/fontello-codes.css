@@ -1,0 +1,7 @@
+
+.icon-cancel:before { content: '\e800'; } /* '' */
+.icon-basket:before { content: '\e801'; } /* '' */
+.icon-phone:before { content: '\e802'; } /* '' */
+.icon-left-dir:before { content: '\e803'; } /* '' */
+.icon-right-dir:before { content: '\e804'; } /* '' */
+.icon-angle-down:before { content: '\f107'; } /* '' */

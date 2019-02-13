@@ -1,0 +1,38 @@
+<main class="bouquets">
+<h2 class="bouquets--head">Букеты</h2>
+<canvas class="bouquets--bg"></canvas>
+<button role="presentation" class="clean-button slider--nav" tabindex="-1">
+  <i class="icon-left-dir slider--ic-left slider--ic"></i>
+  <i class="icon-right-dir slider--ic-right slider--ic"></i>
+</button >
+<div class="slider">
+  <% bouquets.forEach((item, i) => { %>
+    <div class="slider--item">
+      <div class="slider--count">
+        <span class="slider--current"><%= i + 1 %></span>
+        /
+        <span class="slider--overall"><%= bouquets.length %></span>
+      </div>
+      <figure>
+        <img class="slider--photo" src=<%= "/images/bouquets/" + item.photo %> alt="букет">
+        <figcaption class="slider--title"><%= item.title %></figcaption>
+      </figure>
+      <div class="slider--bottom">
+
+        <ul class="slider--flowers">
+          <% item.flowers.forEach(flower => { %>
+            <li class="slider--flower">
+              <%= flower %> 
+            </li>
+          <% }); %>
+        </ul>
+        <div class="slider--price-wrap">
+          <span class="slider--price"><%= item.price %></span>
+          <span class="slider--currency">руб</span>
+        </div>
+        <button data-id=<%= item.id %> class="button slider--cart">В корзину</button>
+      </div>
+    </div>
+  <% }); %>
+</div>
+</main>

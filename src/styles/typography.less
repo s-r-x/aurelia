@@ -1,0 +1,24 @@
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../fonts/BebasNeue/BebasNeue.eot');
+	src: url('../fonts/BebasNeue/BebasNeue.eot') format('embedded-opentype'),
+	url('../fonts/BebasNeue/BebasNeue.woff2') format('woff2'),
+	url('../fonts/BebasNeue/BebasNeue.woff') format('woff'),
+	url('../fonts/BebasNeue/BebasNeue.ttf') format('truetype'),
+	url('../fonts/BebasNeue/BebasNeue.svg#BebasNeue') format('svg');
+}
+
+@first-font: BebasNeue, Helvetica, sans-serif;
+@second-font: Oranienbaum, Bodoni, Baskerville, serif;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+}
+body {
+  font-family: @first-font;
+  font-size: 18px;
+}
+h2 {
+  font-size: 36px;
+  letter-spacing: 2px;
+}

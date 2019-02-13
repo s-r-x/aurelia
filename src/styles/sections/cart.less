@@ -1,0 +1,126 @@
+.cart {
+  .fixed;
+  .full-width;
+  height: 100vh;
+  z-index: 2000;
+  .flex-center;
+  .hide;
+  opacity: 0;
+  &--inner {
+    .relative;
+    width: 485px;
+    padding: 25px;
+    padding-top: 65px;
+    padding-right: 48px;
+    background: white;
+    color: black;
+    max-height: 100vh;
+    overflow: auto;
+  }
+  &--close {
+    padding: 5px;
+    .absolute;
+    right: 13px;
+    top: 13px;
+    transition: color .3s ease;
+    &:hover {
+      color: @brand-color
+    }
+  }
+  &--table-row {
+    .flex;
+    .relative;
+    &:first-child {
+      border-bottom: 1px solid black;
+    }
+    &:last-child {
+      border-top: 1px solid black;
+      .cart--table-col {
+        width: auto;
+      }
+      justify-content: space-between;
+    }
+  }
+  &--remove-btn {
+    .absolute;
+    color: @brand-color;
+    right: -28px;
+    top: 5px;
+  }
+  &--amount-btn {
+    font-size: 20px;
+    color: @brand-color;
+    padding: 0 7px;
+  }
+  &--table-col {
+    letter-spacing: .5px;
+    padding: 7px 0;
+    &:first-child {
+      width: 35%;
+    }
+    &:nth-child(2) {
+      width: 25%;
+    }
+    &:nth-child(3) {
+      width: 15%;
+    }
+    &:nth-child(4) {
+      width: 25%;
+      .right;
+    }
+  }
+  label {
+    font-size: 0;
+    opacity: 0;
+    height: 0;
+  }
+  input, textarea {
+    width: 320px;
+    &::placeholder {
+      color: rgba(0,0,0,.7);
+    }
+    &:focus {
+      border-color: @brand-color;
+    }
+    //font-family: @second-font;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(0,0,0,.5);
+    padding-bottom: 5px;
+    transition: border-color .3s ease-in-out;
+  }
+  &--form {
+    margin-top: 5vh;
+  }
+  &--form-sect {
+    margin-bottom: 28px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &--payment {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 5px;
+    padding-left: 0;
+    padding-right: 2px;
+    outline-color: @brand-color;
+  }
+}
+@media(max-width: 485px) {
+  .cart--inner {
+    width: 100%;
+    padding-right: 25px;
+    padding-left: 5px;
+  }
+  .cart input, textarea {
+    width: 98% !important;
+  }
+}
